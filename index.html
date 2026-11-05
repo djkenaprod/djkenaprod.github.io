@@ -97,7 +97,54 @@
   </div>
 </section>
 
-    <section class="booking section" id="booking">
+    
+<section class="booking section" id="booking">
+  <div class="section-kicker">05 / MAKE IT HAPPEN</div>
+  <p class="eyebrow">HAVE AN EVENT COMING UP?</p>
+  <h2>LET'S MAKE<br>IT <em>UNFORGETTABLE.</em></h2>
+  <p>Tell us about your event. DJ Kena prod will get back to you.</p>
+
+  <form id="booking-form" class="booking-form">
+    <input type="text" name="customer_name" placeholder="Your full name" required>
+    <input type="email" name="email" placeholder="Your email address" required>
+    <input type="tel" name="phone" placeholder="Your phone number" required>
+
+    <select name="event_type" required>
+      <option value="">Select event type</option>
+      <option value="Club / Lounge">Club / Lounge</option>
+      <option value="House Party">House Party</option>
+      <option value="Private Event">Private Event</option>
+      <option value="Corporate Event">Corporate Event</option>
+      <option value="Wedding">Wedding</option>
+      <option value="Birthday">Birthday</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <label for="event_date">Event date</label>
+    <input type="date" id="event_date" name="event_date" required>
+
+    <label for="event_time">Event time</label>
+    <input type="time" id="event_time" name="event_time">
+
+    <input type="text" name="location" placeholder="Town / Location" required>
+    <input type="text" name="venue" placeholder="Venue name (if available)">
+    <input type="text" name="budget" placeholder="Estimated budget (KSh)">
+
+    <textarea name="message" placeholder="Tell us more about your event..." rows="5"></textarea>
+
+    <button type="submit" class="button button-gold">
+      SEND BOOKING REQUEST
+    </button>
+
+    <p id="booking-message" role="status"></p>
+  </form>
+
+  <p>Prefer WhatsApp?
+    <a href="https://wa.me/254746200318?text=Hi%20DJ%20Kena%2C%20I%27d%20like%20to%20make%20a%20booking%20inquiry."
+       target="_blank" rel="noopener">Chat with DJ Kena ↗</a>
+  </p>
+</section>
+
       <div class="section-kicker">05 / MAKE IT HAPPEN</div>
       <p class="eyebrow">HAVE AN EVENT COMING UP?</p>
       <h2>LET'S MAKE<br>IT <em>UNFORGETTABLE.</em></h2>
@@ -120,6 +167,8 @@
   <a href="https://www.tiktok.com/@dee_dancedj" target="_blank" rel="noopener noreferrer">TIKTOK ↗</a>
 </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
