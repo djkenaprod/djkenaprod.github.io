@@ -161,7 +161,7 @@
 
   function rejectBooking(id) {
     if (window.confirm("Reject this booking?")) {
-      updateBookingStatus(id, "rejected");
+      updateBookingStatus(id, "cancelled");
     }
   }
 
