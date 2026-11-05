@@ -1,5 +1,5 @@
 
-const supabase = window.djKenaSupabase;
+import { supabase } from "./supabase.js";
 
 const loginPanel = document.getElementById("login-panel");
 const dashboard = document.getElementById("dashboard");
