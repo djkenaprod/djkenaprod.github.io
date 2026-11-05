@@ -1,5 +1,4 @@
-
-const supabase = window.djKenaSupabase;
+var supabase = window.djKenaSupabase;
 
 const loginPanel = document.getElementById("login-panel");
 const dashboard = document.getElementById("dashboard");
