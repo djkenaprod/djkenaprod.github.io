@@ -1,3 +1,4 @@
+(function () {
 var supabase = window.djKenaSupabase;
 
 const loginPanel = document.getElementById("login-panel");
@@ -108,3 +109,4 @@ document.getElementById("signout").addEventListener("click", async () => {
 supabase.auth.getSession().then(({ data }) => {
   verifyAdmin(data.session);
 });
+})();
