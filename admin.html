@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#09090c">
+  <title>DJ Kena prod | Admin</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; padding: 30px 18px;
+      background: #09090c; color: #f5f1e9;
+      font-family: Arial, sans-serif;
+    }
+    main { max-width: 650px; margin: 50px auto; }
+    .panel {
+      background: #151519; border: 1px solid #393126;
+      border-radius: 12px; padding: 28px;
+    }
+    h1 { letter-spacing: 2px; }
+    h1 span { color: #d6b36a; }
+    label { display: block; margin: 16px 0 7px; }
+    input {
+      width: 100%; padding: 13px; border-radius: 7px;
+      border: 1px solid #393126; background: #09090c;
+      color: white;
+    }
+    button {
+      margin-top: 20px; padding: 13px 20px;
+      border: 0; border-radius: 7px;
+      background: #d6b36a; color: #09090c;
+      font-weight: bold; cursor: pointer;
+    }
+    .message { color: #d6b36a; }
+    .hidden { display: none; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 12px 8px; text-align: left; border-bottom: 1px solid #393126; }
+    .table-wrap { overflow-x: auto; }
+  </style>
+</head>
+<body>
+<main>
+  <section id="login-panel" class="panel">
+    <h1>DJ KENA <span>PROD.</span></h1>
+    <p>PRIVATE BUSINESS DASHBOARD</p>
+
+    <form id="login-form">
+      <label for="email">Admin email</label>
+      <input id="email" type="email" required>
+
+      <label for="password">Password</label>
+      <input id="password" type="password" required>
+
+      <button type="submit">Sign in</button>
+    </form>
+    <p id="login-message" class="message"></p>
+  </section>
+
+  <section id="dashboard" class="panel hidden">
+    <h1>BUSINESS <span>DASHBOARD.</span></h1>
+    <p>Welcome to your DJ Kena prod admin area.</p>
+
+    <h2>Booking inquiries</h2>
+    <p id="booking-count">Loading...</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Customer</th>
+            <th>Event</th>
+            <th>Date</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="bookings-body"></tbody>
+      </table>
+    </div>
+
+    <p id="dashboard-message" class="message"></p>
+    <button id="refresh" type="button">Refresh</button>
+    <button id="signout" type="button">Sign out</button>
+  </section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>
